@@ -1,0 +1,131 @@
+@import url(header.css);
+@import url(footer.css);
+
+.contenedor-general {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+    padding: 5em;
+}
+body{
+    font-family: "Pixelify Sans", sans-serif;
+}
+/*Estilos para el contenedor de productos */
+.box__productos {
+    height: 70vh;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+.box__productos h2, .box__form-Agregar-Producto h2 {
+    margin-bottom: 2em;
+    font-size: 2em;
+    font-weight: bold;
+}
+.box__cartas {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    place-items: center;
+    overflow-y: scroll;
+}
+
+.carta {
+    width: 15rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: .8em;
+    background-color: rgba(208, 183, 255, 0.76);
+}
+
+.carta picture {
+    background-color: white;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+/*Estilos para la info de la tarjeta*/
+.producto__info{
+    width: 90%;
+    font-size: 1.5em;
+    display:flex;
+    flex-direction: column;
+    padding-top: .8em;
+    gap: .8em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.valor__producto{
+    display: flex;
+    justify-content: space-between;
+}
+.producto__info i{
+    cursor: pointer;
+}
+/*Estilos para el formulario de productos*/
+.box__form-Agregar-Producto{
+    width: 45%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.box__form-Agregar-Producto form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.formulario__item{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 1em;
+}
+
+.formulario__item label{
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+.formulario__item input{
+    line-height: 3em;
+    border: 3px solid rgb(10, 1, 79);
+    border-radius: 25px;
+    padding: 0 20px;
+}
+
+.formulario__botones{
+    display: flex;
+    gap: 2em;
+    margin: 2em 0 0em;
+}
+
+.formulario__botones button{
+    width: 10em;
+    border: 2px solid rgb(10, 1, 79);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.formulario__botones button:hover{
+    background-color: rgba(208, 183, 255, .5);
+}

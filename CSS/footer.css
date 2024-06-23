@@ -1,0 +1,28 @@
+@import url(header.css);
+
+.box__copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(85, 42, 165, 0.658);
+    padding: 3em;
+    gap: 2em;
+}
+.box__copyright picture{
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.box__copyright picture:hover{
+    animation: moverALosLados 2s;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+}

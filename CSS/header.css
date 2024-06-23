@@ -1,0 +1,28 @@
+.box__encabezado{
+    width: 100%;
+    display: flex;
+    background-color: rgba(85, 42, 165, 0.658);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.box__encabezado picture {
+    width: 125px;
+}
+.box__encabezado picture:hover{
+    animation: moverALosLados 2s;
+}
+@keyframes moverALosLados{
+    0%{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(10deg);
+    }
+    66%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
