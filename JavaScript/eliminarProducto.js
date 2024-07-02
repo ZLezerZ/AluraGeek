@@ -13,6 +13,7 @@ export function eliminarProducto(){
         try {
           await conectarAPI.eliminarProducto(id_producto);
           alert("Producto eliminado exitosamente.");
+          location.reload();
         } catch {
           alert("Hubo un problema al intentar eliminar el producto.");
         }
