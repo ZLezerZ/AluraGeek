@@ -1,6 +1,5 @@
 import { conectarAPI } from "./conexionAPI.js";
 import { listarProductos } from "./mostrarProducto.js";
-console.log("SE ESTÁ EJECUTANDO EL SCRIPT DE ELIMINAR PRODUCTO");
 
 export function eliminarProducto(){
     const Lista_botones_Eliminar = document.querySelectorAll("[data-boton_desechar]");
@@ -12,8 +11,8 @@ export function eliminarProducto(){
         const id_producto = cartaProducto.getAttribute("data-id");
         try {
           await conectarAPI.eliminarProducto(id_producto);
+    location.reload();
           alert("Producto eliminado exitosamente.");
-          location.reload();
         } catch {
           alert("Hubo un problema al intentar eliminar el producto.");
         }

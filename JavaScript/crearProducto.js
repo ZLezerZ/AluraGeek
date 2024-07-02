@@ -16,8 +16,8 @@ async function agregarCarta(evento) {
   }
   try {
     await conectarAPI.agregarCarta(nombre, precio, imagen);
-    alert("¡Se ha añadido el producto exitosamente!");
     location.reload();
+    alert("¡Se ha añadido el producto exitosamente!");
   } catch (e) {
     alert(e);
   }

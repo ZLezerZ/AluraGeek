@@ -28,7 +28,6 @@ async function agregarCarta(nombre,precio,imagen){
     return listaProductos;
 };
 async function eliminarProducto(id_producto){
-    console.log("Se entró en el método EliminarProducto de la conexión API. El ID es: "+id_producto);
     const conexion = await fetch(`http://localhost:3001/productos/${id_producto}`,{
         method: "DELETE",
         headers:{
@@ -36,7 +35,6 @@ async function eliminarProducto(id_producto){
         }
     });
     if(!conexion.ok){
-        console.log("Hubo un error en eliminar producto del Conexión Api")
         throw new Error("No fue posible agregar el producto a la lista"); 
     };
     const listaActualizada = await conexion.json();

@@ -26,7 +26,6 @@ export async function listarProductos(){
             listaProductos.appendChild(construirCartaProducto(element.id, element.nombre, element.precio, element.imagen));
         });
     }catch(e){
-        console.log(e);
         listaProductos.innerHTML= `<h2 class="error_al_listar">No fue posible cargar la lista de productos <br><br>=(</h2>`;
     };
 };
