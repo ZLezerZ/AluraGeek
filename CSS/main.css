@@ -69,7 +69,6 @@ body {
     border: 2px solid black;
     border-radius: 15px;
 }
-
 /*Estilo para errores de caja de productos*/
 .error_al_listar {
     padding: 25px;
@@ -88,9 +87,11 @@ body {
 }
 
 .producto__info p {
-    white-space: nowrap;
-    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Esto permite que se vean solo 2 líneas de texto y luego se agregan puntos suspensivos con la siguientes propiedades */
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+    overflow: hidden;
 
 }
 

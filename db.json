@@ -1,3 +1,28 @@
 {
-  "productos": []
+  "productos": [
+    {
+      "id": "9bbf",
+      "nombre": "Caja Misteriosa - Magic",
+      "precio": "300",
+      "imagen": "https://github.com/ZLezerZ/AluraGeek/blob/main/Imagenes/Caja-magic.png?raw=true"
+    },
+    {
+      "id": "09b8",
+      "nombre": "Taza - Deamon Slayer",
+      "precio": "150",
+      "imagen": "https://github.com/ZLezerZ/AluraGeek/blob/main/Imagenes/deamon-slayer-taza.png?raw=true"
+    },
+    {
+      "id": "16fc",
+      "nombre": "Funko de Sauron - Señor de Los Anillos",
+      "precio": "170",
+      "imagen": "https://github.com/ZLezerZ/AluraGeek/blob/main/Imagenes/funko-sauron.jpg?raw=true"
+    },
+    {
+      "id": "88ce",
+      "nombre": "Radio - Portal",
+      "precio": "350",
+      "imagen": "https://github.com/ZLezerZ/AluraGeek/blob/main/Imagenes/radio-portal.jpg?raw=true"
+    }
+  ]
 }
