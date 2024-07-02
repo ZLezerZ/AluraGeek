@@ -6,11 +6,14 @@
     justify-content: center;
     gap: 2em;
     width: 100%;
+    height: auto;
     padding: 5em;
 }
-body{
+
+body {
     font-family: "Pixelify Sans", sans-serif;
 }
+
 /*Estilos para el contenedor de productos */
 .box__productos {
     height: 70vh;
@@ -22,18 +25,26 @@ body{
     border-radius: 20px;
     padding: 10px;
 }
-.box__productos h2, .box__form-Agregar-Producto h2 {
-    margin-bottom: 2em;
+
+.box__productos h2,
+.box__form-Agregar-Producto h2 {
+    margin: 1em 0 1em 0;
     font-size: 2em;
     font-weight: bold;
+    text-align: center;
 }
-.box__cartas {
+
+.lista__cartas {
     width: 100%;
     display: grid;
-    grid-auto-rows: 22rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     place-items: center;
     overflow-y: scroll;
+    border: 2px dashed black;
+    border-radius: 25px;
+    padding: 1em;
+    gap: 1em;
+    background-color: rgba(10, 1, 79, .2);
 }
 
 .carta {
@@ -50,42 +61,61 @@ body{
 }
 
 .carta picture {
+    display: flex;
+    align-items: center;
     background-color: white;
     width: 100%;
+    height: 220px;
     border: 2px solid black;
     border-radius: 15px;
 }
 
+/*Estilo para errores de caja de productos*/
+.error_al_listar {
+    padding: 25px;
+    color: darkred;
+    text-align: center;
+}
+
 /*Estilos para la info de la tarjeta*/
-.producto__info{
+.producto__info {
     width: 90%;
-    font-size: 1.5em;
-    display:flex;
+    font-size: 1.3em;
+    display: flex;
     flex-direction: column;
     padding-top: .8em;
     gap: .8em;
+}
+
+.producto__info p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
 }
-.valor__producto{
+
+.valor__producto {
     display: flex;
     justify-content: space-between;
 }
-.producto__info i{
+
+.producto__info i {
     cursor: pointer;
 }
+
 /*Estilos para el formulario de productos*/
-.box__form-Agregar-Producto{
+.box__form-Agregar-Producto {
     width: 45%;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 20px 10px 20px 10px;
+    border: 2px dashed black;
+    border-radius: 25px;
 }
 
-.box__form-Agregar-Producto form{
+.box__form-Agregar-Producto form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -93,32 +123,39 @@ body{
     gap: 1em;
 }
 
-.formulario__item{
+.formulario__item {
     display: flex;
     flex-direction: column;
     width: 60%;
     gap: 1em;
 }
 
-.formulario__item label{
+.formulario__item label {
     padding-left: 10px;
     font-size: 1.2rem;
 }
 
-.formulario__item input{
+.formulario__item input {
     line-height: 3em;
     border: 3px solid rgb(10, 1, 79);
     border-radius: 25px;
     padding: 0 20px;
 }
 
-.formulario__botones{
+.mensaje__error {
+    padding-left: 10px;
+    color: brown;
+}
+
+.formulario__botones {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2em;
     margin: 2em 0 0em;
 }
 
-.formulario__botones button{
+.formulario__botones button {
     width: 10em;
     border: 2px solid rgb(10, 1, 79);
     border-radius: 15px;
@@ -126,6 +163,55 @@ body{
     font-size: 1.2rem;
     cursor: pointer;
 }
-.formulario__botones button:hover{
+
+.formulario__botones button:hover {
     background-color: rgba(208, 183, 255, .5);
+}
+
+@media (max-width: 768px) {
+    .contenedor-general {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .box__productos {
+        height: 70vh;
+        width: 95%;
+        order: 2;
+        margin: 1em 0 2em 0;
+    }
+
+    .box__productos h2 {
+        margin: 1em 0 1em 0;
+    }
+
+    .lista__cartas {
+        gap: .5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: .7em;
+    }
+
+    .carta{
+        scale: .9;
+    }
+
+    .box__form-Agregar-Producto{
+        width: 95%;
+        height: auto;
+        padding: 10px 0 calc(2em + 10px);
+    }
+    .box__form-Agregar-Producto h2{
+        margin: 1em 0 1em 0;
+    }
+    .formulario__item {
+        width: 80%;
+    }
+
+    .formulario__botones{
+        width: 80%;
+    }
 }
