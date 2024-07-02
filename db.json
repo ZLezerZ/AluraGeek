@@ -23,6 +23,12 @@
       "nombre": "Radio - Portal",
       "precio": "350",
       "imagen": "https://github.com/ZLezerZ/AluraGeek/blob/main/Imagenes/radio-portal.jpg?raw=true"
+    },
+    {
+      "id": "b2b4",
+      "nombre": "Peluche de Cubo de Compañía - Portal",
+      "precio": "80",
+      "imagen": "https://github.com/ZLezerZ/AluraGeek/blob/main/Imagenes/peluche-cubo-de-compania.png?raw=true"
     }
   ]
 }
